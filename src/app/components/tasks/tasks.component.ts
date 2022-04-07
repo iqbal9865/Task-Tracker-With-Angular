@@ -1,6 +1,6 @@
+import { Observable } from 'rxjs';
 import { TaskService } from './../../services/task.service';
 import { Component, OnInit } from '@angular/core';
-import { TASKS } from '../../mock-task';
 import { Task } from '../../Task';
 @Component({
   selector: 'app-tasks',
@@ -15,5 +15,8 @@ export class TasksComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskService.getTask().subscribe((tasks) => this.tasks = tasks);
+  }
+  deleteTask(task:any) {
+    this.taskService.deleteTask(task).subscribe(() => (this.tasks = this.tasks.filter(t => t.id !== task.id)));
   }
 }
