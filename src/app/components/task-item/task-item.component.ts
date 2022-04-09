@@ -11,6 +11,7 @@ export class TaskItemComponent implements OnInit {
 
   @Input() task : any;
   @Output() onDeleteTask : EventEmitter <Task> = new EventEmitter()
+  @Output() onToggleReminder : EventEmitter <Task> = new EventEmitter()
 
   counter: any;
   anotherCounter: any;
@@ -25,7 +26,6 @@ export class TaskItemComponent implements OnInit {
     this.tsk.anotherTestEvent.subscribe(data => {
       this.anotherCounter = data + data;
     })
-
    }
 
   ngOnInit(): void {
@@ -33,5 +33,8 @@ export class TaskItemComponent implements OnInit {
 
   onDelete (task:any) {
     this.onDeleteTask.emit(task)
+  }
+  ontoggle(task:any){
+    this.onToggleReminder.emit(task)
   }
 }

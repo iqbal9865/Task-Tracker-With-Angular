@@ -1,5 +1,10 @@
-<app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)" ></app-task-item>
+<app-task-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (onDeleteTask)="deleteTask(task)"
+  (onToggleReminder)="toggleReminder(task)">
+</app-task-item>
 
-<button (click)="sendEvent('2')"> Send Event </button>
+<!-- <button (click)="sendEvent('2')"> Send Event </button> -->
 
-<button (click)="increaseCounter(1)">Click The Button</button>
+<!-- <button (click)="increaseCounter(1)">Click The Button</button> -->
