@@ -17,6 +17,12 @@
       "text": "Food Shopping",
       "day": "May 7th at 12:30pm",
       "reminder": true
+    },
+    {
+      "text": "Liverpool vs Manchester United",
+      "day": "13 April 9am",
+      "reminder": true,
+      "id": 4
     }
   ]
 }
