@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Task } from '../Task';
 @Injectable({
@@ -10,11 +10,10 @@ export class TaskService {
 
   public testEvent: BehaviorSubject<any>;
   public anotherTestEvent: BehaviorSubject<any>;
-  constructor(private http : HttpClient) {
 
+  constructor(private http : HttpClient) {
     this.testEvent = new BehaviorSubject('');
     this.anotherTestEvent = new BehaviorSubject('');
-
   }
 
   getTask (): Observable <Task[]> {
