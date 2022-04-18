@@ -21,7 +21,7 @@
     {
       "text": "Liverpool vs Manchester United",
       "day": "13 April 9am",
-      "reminder": true,
+      "reminder": false,
       "id": 4
     }
   ]
